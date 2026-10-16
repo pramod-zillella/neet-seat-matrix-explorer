@@ -1,0 +1,1822 @@
+{
+  "sources": [
+    {
+      "file": "2025_Seat_Matrix_All_India.csv",
+      "sha256": "9565d02f03159a0b656e766bc802ce02bc9d9fcae9982f72074784788441c59a",
+      "component": "2025 original",
+      "headers": [
+        "Institute Type",
+        "Institute",
+        "Program",
+        "Quota",
+        "Open",
+        "Open PwD",
+        "General- EWS",
+        "General- EWS PwD",
+        "OBC",
+        "OBC PwD",
+        "SC",
+        "SC PwD",
+        "ST",
+        "ST PwD",
+        "TotalSeats"
+      ],
+      "schema": "category columns",
+      "sourceRows": 3561,
+      "seatRows": 3561,
+      "zeroSeatRows": 0,
+      "seats": 12678,
+      "reportedTotalRows": [],
+      "categoryTotals": {
+        "Open": 4925,
+        "Open PwD": 252,
+        "General- EWS": 1198,
+        "General- EWS PwD": 63,
+        "OBC": 3234,
+        "OBC PwD": 170,
+        "SC": 1796,
+        "SC PwD": 95,
+        "ST": 898,
+        "ST PwD": 47
+      },
+      "checksPassed": true
+    },
+    {
+      "file": "2025_Seat_Matrix_Deemed.csv",
+      "sha256": "d5aa5a38a16b999d4d8d69b5cf12d88114e3ed8c2c6a9f37cab27ad13a86073d",
+      "component": "2025 original",
+      "headers": [
+        "Institute",
+        "Program",
+        "Quota",
+        "Seats"
+      ],
+      "schema": "total seats only",
+      "sourceRows": 1201,
+      "seatRows": 1201,
+      "zeroSeatRows": 3,
+      "seats": 6372,
+      "reportedTotalRows": [],
+      "categoryTotals": {},
+      "checksPassed": true
+    },
+    {
+      "file": "2025_Seat_Matrix_DNB.csv",
+      "sha256": "025978fa37f554aada40122884be2f128e2f3e3866ac5a5ce17604c4f65befdd",
+      "component": "2025 original",
+      "headers": [
+        "Institute",
+        "Program",
+        "Quota",
+        "Open",
+        "Open PwD",
+        "General- EWS",
+        "General- EWS PwD",
+        "OBC",
+        "OBC PwD",
+        "SC",
+        "SC PwD",
+        "ST",
+        "ST PwD",
+        "TotalSeats"
+      ],
+      "schema": "category columns",
+      "sourceRows": 4419,
+      "seatRows": 4419,
+      "zeroSeatRows": 114,
+      "seats": 8893,
+      "reportedTotalRows": [],
+      "categoryTotals": {
+        "Open": 7436,
+        "Open PwD": 47,
+        "General- EWS": 226,
+        "General- EWS PwD": 12,
+        "OBC": 607,
+        "OBC PwD": 32,
+        "SC": 338,
+        "SC PwD": 17,
+        "ST": 169,
+        "ST PwD": 9
+      },
+      "checksPassed": true
+    },
+    {
+      "file": "2025_Seat_Matrix_Newly_Added.csv",
+      "sha256": "94cd99de737a62736ac5f50aaff2106fe09ff2bb555a09333f64c8129df9e958",
+      "component": "2025 additions",
+      "headers": [
+        "StateName",
+        "InstituteType",
+        "Institute",
+        "Quota",
+        "Branch",
+        "Category",
+        "TotalSeats"
+      ],
+      "schema": "category rows",
+      "sourceRows": 222,
+      "seatRows": 221,
+      "zeroSeatRows": 0,
+      "seats": 292,
+      "reportedTotalRows": [
+        {
+          "row": 223,
+          "seats": 292
+        }
+      ],
+      "categoryTotals": {
+        "BC NO": 51,
+        "SC NO": 28,
+        "OP NO": 173,
+        "ST NO": 13,
+        "EW NO": 18,
+        "OP PH": 4,
+        "BC PH": 2,
+        "SC PH": 1,
+        "ST PH": 1,
+        "EW PH": 1
+      },
+      "checksPassed": true
+    },
+    {
+      "file": "2026_Seat_Matrix_All_India.csv",
+      "sha256": "3c582dd2ab5a56a4eb9717c54edf786338778c14dbf3ec9f3db35840598d589f",
+      "component": "2026 matrix",
+      "headers": [
+        "StateName",
+        "InstituteType",
+        "Institute",
+        "Quota",
+        "Branch",
+        "Category",
+        "TotalSeats"
+      ],
+      "schema": "category rows",
+      "sourceRows": 10060,
+      "seatRows": 10059,
+      "zeroSeatRows": 0,
+      "seats": 14113,
+      "reportedTotalRows": [
+        {
+          "row": 10061,
+          "seats": 14113
+        }
+      ],
+      "categoryTotals": {
+        "SC NO": 2000,
+        "ST NO": 999,
+        "BC NO": 3597,
+        "EW NO": 1333,
+        "OP NO": 5487,
+        "OP PH": 280,
+        "BC PH": 189,
+        "EW PH": 70,
+        "SC PH": 105,
+        "ST PH": 53
+      },
+      "checksPassed": true
+    },
+    {
+      "file": "2026_Seat_Matrix_Deemed.csv",
+      "sha256": "9daa36c2cf560df4fba08698cd935edc1ea0302f645f10023534589a167b90d0",
+      "component": "2026 matrix",
+      "headers": [
+        "StateName",
+        "InstituteType",
+        "Institute",
+        "Quota",
+        "Branch",
+        "Category",
+        "TotalSeats"
+      ],
+      "schema": "category rows",
+      "sourceRows": 1471,
+      "seatRows": 1470,
+      "zeroSeatRows": 0,
+      "seats": 7537,
+      "reportedTotalRows": [
+        {
+          "row": 1472,
+          "seats": 7537
+        }
+      ],
+      "categoryTotals": {
+        "OP NO": 7537
+      },
+      "checksPassed": true
+    },
+    {
+      "file": "2026_Seat_Matrix_DNB.csv",
+      "sha256": "4455c3eee873867b5e418d5a33dd88b5b8db4fcf8928a744ba80c696d77f2b36",
+      "component": "2026 matrix",
+      "headers": [
+        "Institute Type",
+        "Institute",
+        "Program",
+        "Quota",
+        "Open",
+        "Open PwD",
+        "General- EWS",
+        "General- EWS PwD",
+        "OBC",
+        "OBC PwD",
+        "SC",
+        "SC PwD",
+        "ST",
+        "ST PwD",
+        "Total Seats"
+      ],
+      "schema": "category columns",
+      "sourceRows": 4488,
+      "seatRows": 4487,
+      "zeroSeatRows": 0,
+      "seats": 9201,
+      "reportedTotalRows": [
+        {
+          "row": 4489,
+          "seats": 9201
+        }
+      ],
+      "categoryTotals": {
+        "Open": 7614,
+        "Open PwD": 52,
+        "General- EWS": 245,
+        "General- EWS PwD": 13,
+        "OBC": 662,
+        "OBC PwD": 35,
+        "SC": 368,
+        "SC PwD": 19,
+        "ST": 184,
+        "ST PwD": 9
+      },
+      "checksPassed": true
+    }
+  ],
+  "inputSeatRows": 25418,
+  "rows": 10742,
+  "colleges": 1943,
+  "branches": 99,
+  "totals": {
+    "original2025": 27943,
+    "additions2025": 292,
+    "seats2026": 30851
+  },
+  "missingCodeResolutions": [
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 28,
+      "name": "Government Medical College, Rajamahendravaram, 57-5-20, Ramalayam Street, R.V.Nagar, Mallikarjuna Nagar, Rajamahendravaram, East Godavari District, Andhra",
+      "resolvedCode": "904579",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 29,
+      "name": "Government Medical College, Rajamahendravaram, 57-5-20, Ramalayam Street, R.V.Nagar, Mallikarjuna Nagar, Rajamahendravaram, East Godavari District, Andhra",
+      "resolvedCode": "904579",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 30,
+      "name": "Government Medical College, Rajamahendravaram, 57-5-20, Ramalayam Street, R.V.Nagar, Mallikarjuna Nagar, Rajamahendravaram, East Godavari District, Andhra",
+      "resolvedCode": "904579",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 31,
+      "name": "Government Medical College, Rajamahendravaram, 57-5-20, Ramalayam Street, R.V.Nagar, Mallikarjuna Nagar, Rajamahendravaram, East Godavari District, Andhra",
+      "resolvedCode": "904579",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 32,
+      "name": "Government Medical College, Rajamahendravaram, 57-5-20, Ramalayam Street, R.V.Nagar, Mallikarjuna Nagar, Rajamahendravaram, East Godavari District, Andhra",
+      "resolvedCode": "904579",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 33,
+      "name": "Government Medical College, Rajamahendravaram, 57-5-20, Ramalayam Street, R.V.Nagar, Mallikarjuna Nagar, Rajamahendravaram, East Godavari District, Andhra",
+      "resolvedCode": "904579",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 34,
+      "name": "Government Medical College, Rajamahendravaram, 57-5-20, Ramalayam Street, R.V.Nagar, Mallikarjuna Nagar, Rajamahendravaram, East Godavari District, Andhra",
+      "resolvedCode": "904579",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 35,
+      "name": "Government Medical College, Rajamahendravaram, 57-5-20, Ramalayam Street, R.V.Nagar, Mallikarjuna Nagar, Rajamahendravaram, East Godavari District, Andhra",
+      "resolvedCode": "904579",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 36,
+      "name": "Government Medical College, Rajamahendravaram, 57-5-20, Ramalayam Street, R.V.Nagar, Mallikarjuna Nagar, Rajamahendravaram, East Godavari District, Andhra",
+      "resolvedCode": "904579",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 46,
+      "name": "VARDHMAN INSTITUTE OF MEDICAL SCIENCES, NALANDA, BMIMS CAMPUS, PAWAPURI, NALANDA, Bihar, 803115",
+      "resolvedCode": "700541",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 47,
+      "name": "VARDHMAN INSTITUTE OF MEDICAL SCIENCES, NALANDA, BMIMS CAMPUS, PAWAPURI, NALANDA, Bihar, 803115",
+      "resolvedCode": "700541",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 48,
+      "name": "VARDHMAN INSTITUTE OF MEDICAL SCIENCES, NALANDA, BMIMS CAMPUS, PAWAPURI, NALANDA, Bihar, 803115",
+      "resolvedCode": "700541",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 49,
+      "name": "VARDHMAN INSTITUTE OF MEDICAL SCIENCES, NALANDA, BMIMS CAMPUS, PAWAPURI, NALANDA, Bihar, 803115",
+      "resolvedCode": "700541",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 50,
+      "name": "VARDHMAN INSTITUTE OF MEDICAL SCIENCES, NALANDA, BMIMS CAMPUS, PAWAPURI, NALANDA, Bihar, 803115",
+      "resolvedCode": "700541",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 51,
+      "name": "VARDHMAN INSTITUTE OF MEDICAL SCIENCES, NALANDA, BMIMS CAMPUS, PAWAPURI, NALANDA, Bihar, 803115",
+      "resolvedCode": "700541",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 52,
+      "name": "VARDHMAN INSTITUTE OF MEDICAL SCIENCES, NALANDA, BMIMS CAMPUS, PAWAPURI, NALANDA, Bihar, 803115",
+      "resolvedCode": "700541",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 53,
+      "name": "VARDHMAN INSTITUTE OF MEDICAL SCIENCES, NALANDA, BMIMS CAMPUS, PAWAPURI, NALANDA, Bihar, 803115",
+      "resolvedCode": "700541",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 54,
+      "name": "VARDHMAN INSTITUTE OF MEDICAL SCIENCES, NALANDA, BMIMS CAMPUS, PAWAPURI, NALANDA, Bihar, 803115",
+      "resolvedCode": "700541",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 55,
+      "name": "VARDHMAN INSTITUTE OF MEDICAL SCIENCES, NALANDA, BMIMS CAMPUS, PAWAPURI, NALANDA, Bihar, 803115",
+      "resolvedCode": "700541",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 56,
+      "name": "VARDHMAN INSTITUTE OF MEDICAL SCIENCES, NALANDA, BMIMS CAMPUS, PAWAPURI, NALANDA, Bihar, 803115",
+      "resolvedCode": "700541",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 57,
+      "name": "VARDHMAN INSTITUTE OF MEDICAL SCIENCES, NALANDA, BMIMS CAMPUS, PAWAPURI, NALANDA, Bihar, 803115",
+      "resolvedCode": "700541",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 135,
+      "name": "Jawaharlal Nehru Medical College, Sawangi (Meghe), Wardha-, Jawaharlal Nehru Medical College, Sawangi Meghe Wardha - 442107, Maharashtra State, Maharashtra,",
+      "resolvedCode": "700437",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 182,
+      "name": "Autonomous state Medical College, Siddharthnagar,UP, 71- Ashok Marg, Villlage-Mudilah, Naugarh, Uttar Pradesh",
+      "resolvedCode": "904568",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 183,
+      "name": "Autonomous state Medical College, Siddharthnagar,UP, 71- Ashok Marg, Villlage-Mudilah, Naugarh, Uttar Pradesh",
+      "resolvedCode": "904568",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 184,
+      "name": "Autonomous state Medical College, Siddharthnagar,UP, 71- Ashok Marg, Villlage-Mudilah, Naugarh, Uttar Pradesh",
+      "resolvedCode": "904568",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 188,
+      "name": "Maharshi Vishwamitra Autonomous State Medical College, Ghazipurr, Maharshi Vishwamitra Autonomous State Medical College, R.T.I. Ground, Ghazipur, Uttar Pradesh",
+      "resolvedCode": "904636",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 189,
+      "name": "Maharshi Vishwamitra Autonomous State Medical College, Ghazipurr, Maharshi Vishwamitra Autonomous State Medical College, R.T.I. Ground, Ghazipur, Uttar Pradesh",
+      "resolvedCode": "904636",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    },
+    {
+      "source": "2025_Seat_Matrix_Newly_Added.csv",
+      "row": 191,
+      "name": "Rani Durgavati Medical College, Banda , Rani Durgavati Medical College Naraini Road Banda, Uttar Pradesh, 210001",
+      "resolvedCode": "701515",
+      "reason": "Reviewed matching campus name and locality in supplied source files"
+    }
+  ],
+  "campusAliases": [
+    {
+      "canonicalCode": "902791",
+      "codes": [
+        "902791",
+        "904584"
+      ],
+      "name": "Andaman and Nicobar Islands Institute of Medical Sciences, Port Blair",
+      "evidence": {
+        "902791": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "ANDAMAN AND NICOBAR ISLANDS INSTITUTE OF MEDICAL SCIENCES, Andaman and Nicobar"
+          }
+        ],
+        "904584": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Andaman & Nicobar Islands Institute of Medical Sciences, Port Blair, DHS Annexe Building, Atlanta Point, Sri Vijaya Puram, South Andaman"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "700890",
+      "codes": [
+        "700890",
+        "904554"
+      ],
+      "name": "Malabar Cancer Centre, Thalassery, Kannur",
+      "evidence": {
+        "700890": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "Malabar Cancer Centre"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Malabar Cancer Centre, Moozhikkara P O, Kodiyeri, Thalassery, Kannur, Kerala-670103"
+          }
+        ],
+        "904554": [
+          {
+            "source": "2025_Seat_Matrix_Newly_Added.csv",
+            "name": "MALABAR CANCER CENTRE POST GRADUATE INSTITUTE OF ONCOLOGY SCIENCES AND RESEARCH, MOOZHIKKARA )PO), KODIYERI, THALASSERY, KANNUR, KERALA"
+          },
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Malabar Cancer Centre Post Graduate Institute of Oncology Sciences and Research, Modakkallur, Moozhikkara (PO), Thalassery, Kannur, Kerala- 670103"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "700361",
+      "codes": [
+        "700361",
+        "905699"
+      ],
+      "name": "Ganesh Shankar Vidyarthi Memorial / GSVM Medical College, Kanpur",
+      "evidence": {
+        "700361": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "Ganesh Shankar Vidyarthi Memorial Medical College"
+          }
+        ],
+        "905699": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "GSVM Medical College, Kanpur, GANESH SHANKAR VIDYARTHI MEMORIAL MEDICAL COLLEGE, SWAROOP NAGAR, KANPUR- 208002"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "700435",
+      "codes": [
+        "700435",
+        "905682"
+      ],
+      "name": "Bharati Vidyapeeth Medical College, Pune",
+      "evidence": {
+        "700435": [
+          {
+            "source": "2025_Seat_Matrix_Deemed.csv",
+            "name": "Bharati Vidyapeeth Deemed to be University Medical College,Pune"
+          }
+        ],
+        "905682": [
+          {
+            "source": "2026_Seat_Matrix_Deemed.csv",
+            "name": "Bharati Vidyapeeth University Medical College, Pune, Pune- Satara Road, Dhanakawadi"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "701347",
+      "codes": [
+        "701347",
+        "905707"
+      ],
+      "name": "Rampurhat Government Medical College and Hospital",
+      "evidence": {
+        "701347": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "Rampurhat Govt. Medical College and Hospital"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Rampurhat Govt. Medical College and Hospital, Rampurhat, Birbhum West Bengal , West Bengal-731224"
+          }
+        ],
+        "905707": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Rampurhat Government Medical College & Hospital, Rampurhat, NA"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "902831",
+      "codes": [
+        "902831",
+        "905595"
+      ],
+      "name": "Maharshi Devraha Baba Autonomous State Medical College, Deoria",
+      "evidence": {
+        "902831": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "Maharshi Devraha Baba Autonomous State Medical College, Deoria, Uttar Pradesh"
+          },
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Maharshi Devraha Baba Autonomous State Medical College, Deoria, Hospital Road, Saket Nagar, Deoria-274001"
+          }
+        ],
+        "905595": [
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Maharshi Devraha Baba Autonomous State Medical College, Saket Nagar, Deoria , Uttar Pradesh-274001"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "700107",
+      "codes": [
+        "700107",
+        "904601"
+      ],
+      "name": "Darbhanga Medical College, Laheriasarai",
+      "evidence": {
+        "700107": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "DARBHANGA MEDICAL COLLEGE"
+          },
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Darbhanga Medical College, Lehriasarai, Sheetal Prasad Marg, Laheriasarai, Darbhanga, Bihar"
+          }
+        ],
+        "904601": [
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Darbhanga Medical College Hospital, Laheriasarai P.O. -DMC, Laheriasarai, Darbhanga, Bihar-846003"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "700400",
+      "codes": [
+        "700400",
+        "904617"
+      ],
+      "name": "Nil Ratan Sircar Medical College, Kolkata",
+      "evidence": {
+        "700400": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "NIL RATAN SIRCAR MEDICAL COLLEGE"
+          },
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Nilratan Sircar Medical College, Kolkata, NIL RATAN SIRCAR MEDICAL COLLEGE, 138 AJC BOSE ROAD, KOLKATA-700014."
+          }
+        ],
+        "904617": [
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Nil Ratan Sircar Medical College Hospital, 138, AJC Bose Road, Sealdah, Kolkata, West Bengal-700014"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "701514",
+      "codes": [
+        "701514",
+        "904620"
+      ],
+      "name": "Rajkiya Medical College, Orai, Jalaun",
+      "evidence": {
+        "701514": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "Rajkiya Medical College, Jalaun"
+          },
+          {
+            "source": "2025_Seat_Matrix_Newly_Added.csv",
+            "name": "Rajkiya Medical College, Jalaun, kalpi Road orai Jalaun, Uttar Pradesh, 285001"
+          },
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Rajkiya Medical College Jalaun, Orai, Uttar Pradesh, kalpi Road orai Jalaun"
+          }
+        ],
+        "904620": [
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "RAJKIYA MEDICAL COLLEGE, ORAI, JALAUN , Uttar Pradesh-285001"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "701515",
+      "codes": [
+        "701515",
+        "701585"
+      ],
+      "name": "Rani Durgavati / Government Allopathic Medical College, Banda",
+      "evidence": {
+        "701515": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "Rani Durgavati Medical College, Banda"
+          },
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Government Allopathic Medical College, Banda, UP, Rani Durgavati Medical College Naraini Road Banda"
+          }
+        ],
+        "701585": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "Government Allopathic Medical College, Uttar Pradesh"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Rani Durgavati Medical College (Formerly known as Government Allopathic Medical College), Banda Tindwara Road, Banda , Uttar Pradesh-210001"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "904278",
+      "codes": [
+        "904278",
+        "904636"
+      ],
+      "name": "Maharshi Vishwamitra Autonomous State Medical College, Ghazipur",
+      "evidence": {
+        "904278": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "Maharshi Vishwamitra Autonomous State Medical College, RTI Maidan, Ghazipur , Uttar Pradesh- 233001"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Maharshi Vishwamitra Autonomous State Medical College, RTI Maidan, Ghazipur , Uttar Pradesh-233001"
+          }
+        ],
+        "904636": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Autonomous State Medical College Society Ghazipur, Maharshi Vishwamitra Autonomous State Medical College, R.T.I. Ground, Ghazipur, Uttar Pradesh"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "901683",
+      "codes": [
+        "901683",
+        "904635"
+      ],
+      "name": "Veerangana Avantibai Lodhi Autonomous State Medical College, Etah",
+      "evidence": {
+        "901683": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "Autonomous state medical College, Uttar Pradesh"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Veerangana Avantibai Lodhi Autonomous State Medical College (Formerly known as Autonomous State Medical College) Etah, Marehra Rd, Siraon-207001 Uttar Pradesh"
+          }
+        ],
+        "904635": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Autonomous State Medical College Society, Etah, Uttar Pradesh, 112 Nagla Padihar, Sirao Mahrara Link road Sakeet, Etah Uttar Pradesh 207001 Etah, Uttar Pradesh"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "901684",
+      "codes": [
+        "901684",
+        "904573"
+      ],
+      "name": "Autonomous State Medical College, Hardoi",
+      "evidence": {
+        "901684": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "Autonomous State Medical College, Uttar Pradesh"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Autonomous State Medical College, Hardoi, Gaura Danda, Sitapur Road Uttar Pradesh , Uttar Pradesh-241001"
+          }
+        ],
+        "904573": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Autonomous State Medical College Society, Hardoi, Gaura Danda, Sitapur Road, Hardoi U.P. -241001"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "901757",
+      "codes": [
+        "901757",
+        "904586"
+      ],
+      "name": "Dr Sonelal Patel Autonomous State Medical College, Pratapgarh",
+      "evidence": {
+        "901757": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "RAJA PRATAP BAHADUR HOSPITAL ALLIED WITH DR SONELAL PATEL AUTONOMOUS STATE MEDICAL COLLEGE,Uttar Pradesh"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "RAJA PRATAP BAHADUR HOSPITAL ALLIED WITH DR SONELAL PATEL AUTONOMOUS STATE MEDICAL COLLEGE, GAI GHAT,PURE KESHAV RAI PRATAPGARH (U.P) , Uttar Pradesh-230001"
+          }
+        ],
+        "904586": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Autonomous State Medical College Pratapgarh, Pure Keshav Rai, Gaighat Road Pratapgarh"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "700759",
+      "codes": [
+        "700759",
+        "904588"
+      ],
+      "name": "Government Medical College and Associated Hospital, Anantnag",
+      "evidence": {
+        "700759": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "Government Medical College and Associated Hospital"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Government Medical College and Associated Hospital, Janglat Mandi, Anantnag, Jammu and Kashmir-192101"
+          }
+        ],
+        "904588": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Government Medical College, Anantnag, DAILGAM ANANTNAG JAMMU & KASHMIR 192210"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "700761",
+      "codes": [
+        "700761",
+        "904589"
+      ],
+      "name": "Government Medical College and Associated Hospital, Baramulla",
+      "evidence": {
+        "700761": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "Associated Hospital Government Medical College"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Associated Hospital Government Medical College, Kanthbagh Baramulla, Jammu and Kashmir-193101"
+          }
+        ],
+        "904589": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Government Medical College, Baramulla, Kanth Bagh, Baramulla Jammu & Kashmir 193101"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "700760",
+      "codes": [
+        "700760",
+        "904634"
+      ],
+      "name": "Government Medical College and Associated Hospital, Kathua",
+      "evidence": {
+        "700760": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "Associated Hospital Government Medical College"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Associated Hospital Government Medical College, Nh1a , Kathua, Jammu and Kashmir , Jammu and Kashmir-184104"
+          }
+        ],
+        "904634": [
+          {
+            "source": "2025_Seat_Matrix_Newly_Added.csv",
+            "name": "Government Medical College, Kathua, NH1A, Near Kalibari, Kathua"
+          },
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Government Medical College, Kathua, Village Chack Sajjan Kathua 184101"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "700758",
+      "codes": [
+        "700758",
+        "904633"
+      ],
+      "name": "Government Medical College and Associated Hospital, Rajouri",
+      "evidence": {
+        "700758": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "Government Medical College and Associated Hospital"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Government Medical College and Associated Hospital, Kheora, Rajouri, Jammu and Kashmir-185131"
+          }
+        ],
+        "904633": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Government Medical College, Rajouri, J&K, Government Medical College, Rajouri Mehra Campus Pincode: 185132"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "700370",
+      "codes": [
+        "700370",
+        "904628"
+      ],
+      "name": "LLRM Medical College and SVBP Hospital, Meerut",
+      "evidence": {
+        "700370": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "Lala Lajpat Rai Memorial Medical College, MEERUT"
+          },
+          {
+            "source": "2025_Seat_Matrix_Newly_Added.csv",
+            "name": "Lala Lajpat Rai Memorial Medical College, MEERUT, Lala Lajpat Rai Memorial Medical College, MEERUT, Uttar Pradesh, 250004"
+          },
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "LLRM Medical College, Meerut, Lala Lajpat Rai Memorial Medical College, MEERUT"
+          }
+        ],
+        "904628": [
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "SVBP HOSPITAL and LLRM MEDICAL COLLEGE, MEERUT GARH ROAD MEERUT, Uttar Pradesh-250004"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "701504",
+      "codes": [
+        "701504",
+        "701207",
+        "905685"
+      ],
+      "name": "ESIC Medical College, Sanath Nagar, Hyderabad",
+      "evidence": {
+        "701504": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "ESIC Medical College, Hyderbad"
+          }
+        ],
+        "701207": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "ESIC Medical College Hospital and Super Specialty Hospital"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "ESIC Medical College Hospital and Super Specialty Hospital, Sanath Nagar, Hyderabad, Telangana-500038"
+          }
+        ],
+        "905685": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Employees State Insurance Coporation Medical College, Sanath Nagar, Hyderabad, SANATHNAGAR HYDERABAD"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "700405",
+      "codes": [
+        "700405",
+        "905686"
+      ],
+      "name": "ESIC Medical College and PGIMSR, Rajajinagar, Bengaluru",
+      "evidence": {
+        "700405": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "EMPLOYEES STATE INSURANCE CORPORATION MEDICAL COLLEGE AND PGIMSR"
+          }
+        ],
+        "905686": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Employees State Insurance Corporation Medical College, Bangalore, 3RD BLOCK RAJAJINAGAR BENGALURU 560 010"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Earlier supplied allocation workbooks: exact legacy institute name has Karnataka address PIN 560010; 2026 code 905686 specifies Rajajinagar Bengaluru 560010."
+    },
+    {
+      "canonicalCode": "700329",
+      "codes": [
+        "700329",
+        "701506"
+      ],
+      "name": "Baba Raghav Das / BRD Medical College, Gorakhpur",
+      "evidence": {
+        "700329": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "Baba Raghav Das Medical College"
+          }
+        ],
+        "701506": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "BRD Medical College, Gorakhpur, BABA RAGHAV DAS MEDICAL COLLEGE MAHARAJGANJ ROAD GORAKHPUR UP 273013"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "700112",
+      "codes": [
+        "700112",
+        "904263"
+      ],
+      "name": "Jawaharlal Nehru Medical College and Hospital, Bhagalpur",
+      "evidence": {
+        "700112": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "JAWAHARLAL NEHRU MEDICAL COLLEGE, BHAGALPUR"
+          }
+        ],
+        "904263": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "Jawaharlal Nehru Medical College and Hospital Bhagalpur, Mayaganj Bhagalpur, Bihar-812001"
+          },
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Jawaharlal Nehru Medical College and Hospital Bhagalpur, Mayaganj Bhagalpur, Bihar-812001, MAYAGANJ, BHAGALPUR"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Jawaharlal Nehru Medical College and Hospital Bhagalpur, Mayaganj Bhagalpur, Bihar-812001"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    },
+    {
+      "canonicalCode": "902833",
+      "codes": [
+        "902833",
+        "701340"
+      ],
+      "name": "MahaMaya Rajkiya Allopathic / MRA Medical College, Ambedkar Nagar",
+      "evidence": {
+        "902833": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "MahaMaya Rajkiya Allopathic Medical College"
+          }
+        ],
+        "701340": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "M.R.A. Medical College"
+          },
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "M.R.A. Medical College, Ambedkar Nagar, U.P. Saddarpur, Ambedkar Nagar, U.P. 224227 Uttar Pradesh , Uttar Pradesh-224227, Saddarpur Akabarpur Tanda Road Post Surapur District Ambedkarnagar"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "M.R.A. Medical College, Ambedkar Nagar, U.P. Saddarpur, Ambedkar Nagar, U.P. 224227 Uttar Pradesh , Uttar Pradesh-224227"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Earlier supplied allocation workbooks: MahaMaya Rajkiya Allopathic Medical College address is Saddarpur, AmbedkarNagar, Uttar Pradesh 224227, matching the 2026 M.R.A. campus address."
+    },
+    {
+      "canonicalCode": "902835",
+      "codes": [
+        "902835",
+        "701339",
+        "905698"
+      ],
+      "name": "Maharshi Vashishtha Autonomous State Medical College, Basti",
+      "evidence": {
+        "902835": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "MAHARSHI VASISHTHA AUTONOMOUS STATE MEDICAL COLLEGE BASTI"
+          }
+        ],
+        "701339": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "Maharishi Vashistha Autonomous State Medical College and Opec Hospital"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "Maharishi Vashistha Autonomous State Medical College and Opec Hospital, Rampur , Basti, Uttar Pradesh-272002"
+          }
+        ],
+        "905698": [
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "Government Medical College, Rampur, Basti, gmcbasti2019@gmail.com"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "2026 DNB code 701339 names Maharishi Vashistha Autonomous State Medical College and Opec Hospital in Rampur, Basti; All India code 905698 names the Government Medical College in Rampur, Basti. Earlier allocation records also give Rampur Tahsil Sadar Basti for the legacy name."
+    },
+    {
+      "canonicalCode": "700532",
+      "codes": [
+        "700532",
+        "903317"
+      ],
+      "name": "Shri Bhausaheb Hire Government Medical College, Dhule",
+      "evidence": {
+        "700532": [
+          {
+            "source": "2025_Seat_Matrix_All_India.csv",
+            "name": "Sri Bhausaheb Hire Government Medical College"
+          }
+        ],
+        "903317": [
+          {
+            "source": "2025_Seat_Matrix_DNB.csv",
+            "name": "SHRI BHAUSAHEB HIRE GOVT. MEDICAL COLLEGE, DHULE, Maharashtra"
+          },
+          {
+            "source": "2026_Seat_Matrix_All_India.csv",
+            "name": "SHRI BHAUSAHEB HIRE GOVT. MEDICAL COLLEGE, DHULE, CHAKKARDBARDI CAMPUS, SURAT BYPASS, MUMBAI -AGRA HIGHWAY, DHULE, Maharashtra-424311, SHRI BHAUSAHEB HIRE GOVT.MEDICAL COLLEGE,DHULE"
+          },
+          {
+            "source": "2026_Seat_Matrix_DNB.csv",
+            "name": "SHRI BHAUSAHEB HIRE GOVT. MEDICAL COLLEGE, DHULE, CHAKKARDBARDI CAMPUS, SURAT BYPASS, MUMBAI -AGRA HIGHWAY, DHULE, Maharashtra-424311"
+          }
+        ]
+      },
+      "reason": "Reviewed campus name/locality correspondence; original codes retained",
+      "supportingEvidence": "Supplied matrix names and localities"
+    }
+  ],
+  "stateEnrichments": [
+    {
+      "id": "901862",
+      "state": "Himachal Pradesh",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Dr. Yashwant Singh Parmar Government Medical College Nahan,Near DC Sirmaur residence at Nahan, Himachal Pradesh, 173001"
+      ]
+    },
+    {
+      "id": "701380",
+      "state": "Tamil Nadu",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Apollo First Med Hospital,154, Poonamallee High Road, Kilapuk, Chennai, Tamil Nadu, 600010"
+      ]
+    },
+    {
+      "id": "901841",
+      "state": "Tamil Nadu",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Apollo Speciality Hospitals,Chennai by-pass road, near old palpannai, Ariyamangalam, Trichy , Tamil Nadu, Tamil Nadu, 620010"
+      ]
+    },
+    {
+      "id": "700837",
+      "state": "Karnataka",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Aralaguppe Mallegowda District Hospital,,AZAD PARK CHIKKAMAGALURU, Karnataka, 577101"
+      ]
+    },
+    {
+      "id": "701168",
+      "state": "Telangana",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Asha Hospital, ,Asha Hospital 8-2-316/12/A, Rd #14, Banjara Hills, Hyderabad, Telangana State - 500 034 Off: 040, Telangana, 500034"
+      ]
+    },
+    {
+      "id": "701042",
+      "state": "Rajasthan",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Bhandari Hospital and Research Centre, ,138 A VASUNDHRA COLONY GOPAL PURA BYPASS TONK ROAD JAIPUR, Rajasthan, 302018"
+      ]
+    },
+    {
+      "id": "700696",
+      "state": "Gujarat",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Bharat Cancer Hospital and Research Institute,,Surat-Bardoli Road , Saroli , Surat, Gujarat, 395010"
+      ]
+    },
+    {
+      "id": "701213",
+      "state": "Telangana",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Chalmeda Anand Rao Institute of Medical Sciences (CAIMS) Cancer Hospital and Research Institute, ,Chalmeda Anand Rao Institute of Medical Sciences CAIMS Cancer Hospital and Research Institute bommak, Telangana, 505001"
+      ]
+    },
+    {
+      "id": "701295",
+      "state": "West Bengal",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Chandannagar Sub Division Hospital, ,CHANDANNAGAR SD HOSPITAL, West Bengal, 712136"
+      ]
+    },
+    {
+      "id": "701202",
+      "state": "Telangana",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Citizen Specialty Hospital,,D.No.-1-100-1-CCH, Nallagandla, Serilingampally, Hyderabad, Ranga Reddy District, Telangana, 500019"
+      ]
+    },
+    {
+      "id": "701197",
+      "state": "Telangana",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "District Head Quarters Hospital,,District Hospital, Sangareddy Telangana State, Telangana, 502001",
+        "District Head Quarters Hospital,,H NO 3 3 141 MNCL X ROADS KARIMNAGAR KARIMNAGAR DISTRICT, Telangana, 505001"
+      ]
+    },
+    {
+      "id": "701198",
+      "state": "Telangana",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "District Head Quarters Hospital,,District Hospital, Sangareddy Telangana State, Telangana, 502001",
+        "District Head Quarters Hospital,,H NO 3 3 141 MNCL X ROADS KARIMNAGAR KARIMNAGAR DISTRICT, Telangana, 505001"
+      ]
+    },
+    {
+      "id": "700846",
+      "state": "Karnataka",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "District Hospital Chikkaballapur, ,Opposite to Marulusiddeshwara Temple,M G Road,Chikkaballapura,Karnataka. Karnataka , Karnataka-562101"
+      ]
+    },
+    {
+      "id": "700838",
+      "state": "Karnataka",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "District Hospital, Haveri, Near KEB, PB Road, Haveri, Karnataka, 581110"
+      ]
+    },
+    {
+      "id": "700929",
+      "state": "Maharashtra",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Dr. Panjabrao Alias Bhausaheb Deshmukh Memorial Medical College, , Shivaji Nagar Near Panchawati Square Amravati, Maharashtra, 444603"
+      ]
+    },
+    {
+      "id": "701292",
+      "state": "West Bengal",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Dr.B.N.Bose Sub Divisional Hospital , ,BTRoad Talpukur Barrackpore 24Parganas N 700123, West Bengal, 700123"
+      ]
+    },
+    {
+      "id": "701398",
+      "state": "West Bengal",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Egra Sub Divisional Hospital and SSH ,Egra, PO- Egra, Dist- Purba Medinipur, PIN- 721429, West Bengal, 721429"
+      ]
+    },
+    {
+      "id": "700918",
+      "state": "Madhya Pradesh",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "ESIC Model Hospital and Occupational Disease Centre,,ESIC MODEL HOSPITAL AND ODC NANDA NAGAR INDORE, Madhya Pradesh, 452011"
+      ]
+    },
+    {
+      "id": "700688",
+      "state": "Gujarat",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "GMERS Medical College and Hospital, ,GMERS MEDICAL COLLEGE, NEAR GUJARAT HIGH COURT, S.G HIGH WAY, SOLA, AHMEDABAD, Gujarat, 380060",
+        "GMERS Medical College and Hospital, ,GMERS Medical College Valsad,Nanakwada Halar Road,Valsad ,Gujarat, Gujarat, 396001",
+        "GMERS Medical College and Hospital, ,paddoc road, near majewadi gate, junagadh, Gujarat, 362001",
+        "GMERS Medical College and Hospital,,GMERS Medical College and Hospital Campus, Dharpur, Patan-Unjha State Highway, Patan (North Gujarat,, Gujarat, 384265"
+      ]
+    },
+    {
+      "id": "700990",
+      "state": "Maharashtra",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Govt. Medical College and hospital, ,Govt Medical College Akola Collector Office Road Akola Maharshtra, Maharashtra, 444001"
+      ]
+    },
+    {
+      "id": "701378",
+      "state": "Rajasthan",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "GURUKRIPA HOSPITALS ,JYOTI NAGAR PIPRALI ROAD SIKAR RAJASTHAN, Rajasthan, 332001"
+      ]
+    },
+    {
+      "id": "700943",
+      "state": "Maharashtra",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Laddhad Hospital,,WANKHEDE LAY OUT BULDANA, Maharashtra, 443001"
+      ]
+    },
+    {
+      "id": "701183",
+      "state": "Telangana",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Lotus Children`s Hospital,,6-2-29,Lakdikapul, Hyderabad - 500004, Telangana, 500004"
+      ]
+    },
+    {
+      "id": "701216",
+      "state": "Telangana",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "MAA E.N.T HOSPITALS, MAA HOSPITALS PVT. LTD),MAA E.N.T HOSPITALS(MAA HOSPITALS PVT. LTD.) H.NO:8-2-293\\82\\A\\1266, ROAD NO.36, BESIDE ICICI BANK,, Telangana, 500033"
+      ]
+    },
+    {
+      "id": "700946",
+      "state": "Maharashtra",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Mahatme Eye Bank and Eye Hospital, ,2163-C, Chintaman Nagar, Near Rajiv Nagar, Somalwada,, Maharashtra, 440025"
+      ]
+    },
+    {
+      "id": "700947",
+      "state": "Maharashtra",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Masina Hospital, ,Sant Savta Marg Byculla East Mumbai, Maharashtra, 400027"
+      ]
+    },
+    {
+      "id": "701267",
+      "state": "West Bengal",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Medica Superspecialty Hospital, ,127 Mukundapur, E.M. Byapss, Kolkata, West Bengal, 700099"
+      ]
+    },
+    {
+      "id": "700644",
+      "state": "Delhi",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Moolchand Khairatiram Hospital and Ayurvedic Research Institute,,,Lajpat Nagar-III, New Delhi-110024, Delhi (NCT), 110024"
+      ]
+    },
+    {
+      "id": "701176",
+      "state": "Telangana",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Nice Hospital For Women, Newborn and Children, ,10-2-247 and 248, Shanti Nagar, Masab Tank, Hyderabad, Telangana 500057, India, Telangana, 500057"
+      ]
+    },
+    {
+      "id": "700575",
+      "state": "Andhra Pradesh",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Omni RK Super Specialty Hospital, ,Waltair Main Rd, opp. Lions Club Of, Ram Nagar, Visakhapatnam, Andhra Pradesh 530002, Andhra Pradesh, 530002"
+      ]
+    },
+    {
+      "id": "701196",
+      "state": "Telangana",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Pragna Childrens Hospital, ,6 3 347 22 B 1 DWARAKAPURI SAIBABA TEMPLE LANE PANJAGUTTA HYDERABAD, Telangana, 500082"
+      ]
+    },
+    {
+      "id": "700567",
+      "state": "Andhra Pradesh",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Rainbow Childrens Hospital, (A unit of Rainbow Childrens Medicare Pvt. Ltd.) (Formerly Rainbow Institute of Medical Sciences ,Opp. NTR University of Health Sciences, Currency Nagar. Vijayawada - 520008, Andhra Pradesh, 520008"
+      ]
+    },
+    {
+      "id": "700915",
+      "state": "Madhya Pradesh",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Ratan Jyoti Netralaya Opthalmic Institute and Research Centre, ,18 Vikas Nagar Near Sai Baba Mandir Fort Road Gwalior, Madhya Pradesh, 474002"
+      ]
+    },
+    {
+      "id": "700732",
+      "state": "Haryana",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Sarvodaya Multispeciality And Cancer Hospital, ,Delhi Road, Opposite Red Cross Bhawan, Hisar, Haryana, Haryana, 125001"
+      ]
+    },
+    {
+      "id": "701369",
+      "state": "Madhya Pradesh",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Sewa Sadan Eye Hospital,B-Ward Behind Civil Hospital Sant Hirdaram Nagar Bhopal., Madhya Pradesh, 462030"
+      ]
+    },
+    {
+      "id": "701130",
+      "state": "Tamil Nadu",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Shanmuga Hospital and Salem Cancer Institute, ,24/51 SARADA COLLEGE ROAD ,SHANMUGA HOSPITAL, SALEM TAMILNADU 636007, Tamil Nadu, 636007"
+      ]
+    },
+    {
+      "id": "701079",
+      "state": "Rajasthan",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Shri Ramkaran Joshi Government District Hospital, ,LALSOT ROAD, DAUSA, Rajasthan, 303303"
+      ]
+    },
+    {
+      "id": "701298",
+      "state": "West Bengal",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Sree Balaram Seva Mandir S.G. Hospital, ,225\\5,MS Mukherjee Road,PO-Sopan,PS Khardaha,Kol-700116, West Bengal, 700116"
+      ]
+    },
+    {
+      "id": "700556",
+      "state": "Andhra Pradesh",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Sri Kiran Institute of Ophthalmology, ,Srikiran Institute of Ophthalmology, D.No, 6-227, Penumarthy Road, Thimmapuram Village, Kakinada Rur, Andhra Pradesh, 533005"
+      ]
+    },
+    {
+      "id": "701123",
+      "state": "Tamil Nadu",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "St. Isabels Hospital, ,49, Oliver Road, Mylapore, Chennai., Tamil Nadu, 600004"
+      ]
+    },
+    {
+      "id": "700716",
+      "state": "Gujarat",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "State Hospital ,, Dharampur Garden Road Dharampur Dist Valsad, Gujarat-396050"
+      ]
+    },
+    {
+      "id": "700962",
+      "state": "Maharashtra",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Suraj Eye Institute, ,559, New Colony, Maharashtra, 440001"
+      ]
+    },
+    {
+      "id": "700845",
+      "state": "Karnataka",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Taluka General Hospital , ,Chief Medical Officer Taluka General Hospital Athani, Tq Athani, Dist Belagavi Karnataka 591304, Karnataka, 591304",
+        "Taluka General Hospital, ,CHIEF MEDICAL OFFICER TALUKA GENERAL HOSPITAL HANAMAGERI STREET SAUNDATTI TQ SAUNDATTI DIST BELAGAVI, Karnataka, 591126"
+      ]
+    },
+    {
+      "id": "700802",
+      "state": "Karnataka",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "The Bangalore Hospital,,#202, R.V. Road, Bangalore, Karnataka, 560004"
+      ]
+    },
+    {
+      "id": "700909",
+      "state": "Madhya Pradesh",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Unique Super Specialty Centre,Unique Super Speciality Center, Annpurna Road Indore, Madhya Pradesh, 452009"
+      ]
+    },
+    {
+      "id": "700569",
+      "state": "Andhra Pradesh",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Venkatapadma Hospital,,Venkatapadma hospital, near 3 lamp junction, Door No 15-1-45, Vizianagaram, Andhra Pradesh, 535002"
+      ]
+    },
+    {
+      "id": "701296",
+      "state": "West Bengal",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Vidyasagar State General Hospital,,4 BRAHMA SAMAJ ROAD, BEHALA, KOLKATA - 700034, West Bengal, 700034"
+      ]
+    },
+    {
+      "id": "700667",
+      "state": "Delhi",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Vision Eye Centre, ,19 , SIRI FORT ROAD , NEW DELHI, Delhi (NCT), 110049"
+      ]
+    },
+    {
+      "id": "700840",
+      "state": "Karnataka",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Wenlock District Hospital, ,HAMPANAKATTA MANGALORE, Karnataka, 575001"
+      ]
+    },
+    {
+      "id": "701214",
+      "state": "Telangana",
+      "method": "Exact normalized institution name; every matching reference record agrees on the state",
+      "source": "Previously supplied 2024/2025 allotment workbooks via cutoff explorer aggregate",
+      "evidence": [
+        "Zoi Hospital, (A unit of Panchvaid Healthcare Services Pvt. Ltd) #,Zoi Hospital, Beside HSBC Bank, Raj Bhavan Road, 500082, Telangana, 500082"
+      ]
+    },
+    {
+      "id": "905560",
+      "state": "Delhi",
+      "method": "Reviewed locality in supplied institute address",
+      "source": "2026 DNB source matrix",
+      "evidence": [
+        "Janakpuri-110058"
+      ]
+    },
+    {
+      "id": "905578",
+      "state": "Maharashtra",
+      "method": "Reviewed locality in supplied institute address",
+      "source": "2026 DNB source matrix",
+      "evidence": [
+        "Andheri East, Mumbai-400093"
+      ]
+    },
+    {
+      "id": "905579",
+      "state": "Assam",
+      "method": "Reviewed locality in supplied institute address",
+      "source": "2026 DNB source matrix",
+      "evidence": [
+        "Beltola, Guwahati-781022"
+      ]
+    },
+    {
+      "id": "905584",
+      "state": "Uttar Pradesh",
+      "method": "Reviewed locality in supplied institute address",
+      "source": "2026 DNB source matrix",
+      "evidence": [
+        "Gorakhpur-273013"
+      ]
+    },
+    {
+      "id": "905588",
+      "state": "Karnataka",
+      "method": "Reviewed locality in supplied institute address",
+      "source": "2026 DNB source matrix",
+      "evidence": [
+        "Bengaluru-560098"
+      ]
+    },
+    {
+      "id": "905591",
+      "state": "Telangana",
+      "method": "Reviewed locality in supplied institute address",
+      "source": "2026 DNB source matrix",
+      "evidence": [
+        "Gachibowli, Raidurg, 500032"
+      ]
+    },
+    {
+      "id": "905621",
+      "state": "Telangana",
+      "method": "Reviewed locality in supplied institute address",
+      "source": "2026 DNB source matrix",
+      "evidence": [
+        "Nanakramguda, Hyderabad-500008"
+      ]
+    },
+    {
+      "id": "905628",
+      "state": "West Bengal",
+      "method": "Reviewed locality in supplied institute address",
+      "source": "2026 DNB source matrix",
+      "evidence": [
+        "Kolkata-700056"
+      ]
+    }
+  ],
+  "stateReferenceSha256": "6e5ae732e8c7ab3201474b6d25b9a8345e334263522c7810337c0508e578004d",
+  "unknownStates": [
+    {
+      "id": "901846",
+      "name": "Civil Hospital",
+      "codes": [
+        "901846"
+      ]
+    },
+    {
+      "id": "701397",
+      "name": "District Hospital",
+      "codes": [
+        "701397"
+      ]
+    },
+    {
+      "id": "700847",
+      "name": "District Hospital",
+      "codes": [
+        "700847"
+      ]
+    },
+    {
+      "id": "701078",
+      "name": "District Hospital",
+      "codes": [
+        "701078"
+      ]
+    },
+    {
+      "id": "701304",
+      "name": "District Hospital",
+      "codes": [
+        "701304"
+      ]
+    },
+    {
+      "id": "700818",
+      "name": "District Hospital",
+      "codes": [
+        "700818"
+      ]
+    },
+    {
+      "id": "701199",
+      "name": "District Hospital",
+      "codes": [
+        "701199"
+      ]
+    },
+    {
+      "id": "700856",
+      "name": "Government General Hospital",
+      "codes": [
+        "700856"
+      ]
+    },
+    {
+      "id": "701250",
+      "name": "Sankara Eye Hospital",
+      "codes": [
+        "701250"
+      ]
+    }
+  ],
+  "stateConflicts": [],
+  "notes": [
+    "Matrix group follows the supplied file, not the InstituteType label: some MD/MS All India records are labelled DNB in the source.",
+    "The additions file is treated as incremental 2025 seats, never as a replacement snapshot.",
+    "2026 totals describe the supplied matrices; no 2026 additions file was supplied.",
+    "New means absent from the selected 2025 baseline across all courses and matrices, not newly opened.",
+    "Missing 2026 records are not evidence of college closure or formal seat withdrawal."
+  ]
+}
