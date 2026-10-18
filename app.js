@@ -4,14 +4,14 @@
   if(!data||!core){$('results-title').textContent='Seat data could not be loaded';$('results-description').textContent='Keep the data folder and all site files together, then reload.';return;}
   const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
   const format=value=>Number(value).toLocaleString('en-IN');
-  const signed=value=>(value>0?'+':value<0?'−':'')+format(Math.abs(value));
+  const signed=value=>value===null?'—':(value>0?'+':value<0?'−':'')+format(Math.abs(value));
   const percent=value=>value===null?'—':(value>0?'+':value<0?'−':'')+Math.abs(value).toFixed(1)+'%';
   const colleges=new Map(data.colleges.map(c=>[c.id,c])),branches=new Map(data.branches.map(b=>[b.id,b]));
   const states=[...new Set(data.colleges.map(c=>c.state))].sort();
   const defaultCollege=data.colleges.find(c=>/osmania/i.test(c.name))||data.colleges[0];
   const defaultBranch=data.branches.find(b=>b.id==='GMED')||data.branches[0];
   const initialComparison=[defaultCollege,data.colleges.find(c=>/gandhi medical college/i.test(c.name)&&c.state===defaultCollege.state),data.colleges.find(c=>/kakatiya medical/i.test(c.name))].filter(Boolean).map(c=>c.id);
-  const defaults=()=>({view:'state',state:'all',college:defaultCollege.id,colleges:[...new Set(initialComparison)],branch:defaultBranch.id,branches:[],matrices:data.matrices.slice(),quotas:data.quotas.slice(),includeAdditions:true,change:'all',search:'',sort:'name',direction:'asc'});
+  const defaults=()=>({view:'state',state:'all',college:defaultCollege.id,colleges:[...new Set(initialComparison)],branch:defaultBranch.id,branches:[],matrices:data.matrices.slice(),quotas:data.quotas.slice(),categories:data.categories.slice(),includeAdditions:true,change:'all',search:'',sort:'name',direction:'asc'});
   let filters=defaults(),rows=[],rendered=0,scrollFrame=0,toastTimer;
   const batch=100;
   function readHash(){
@@ -21,7 +21,7 @@
     if(colleges.has(p.get('college')))f.college=p.get('college');
     if(branches.has(p.get('branch')))f.branch=p.get('branch');
     for(const [field,map] of [['colleges',colleges],['branches',branches]])if(p.has(field))f[field]=[...new Set(p.get(field).split(','))].filter(id=>map.has(id));
-    for(const [field,param,available] of [['matrices','matrix',data.matrices],['quotas','quota',data.quotas]])if(p.has(param)&&!p.getAll(param).includes('all'))f[field]=available.filter(name=>p.getAll(param).includes(name));
+    for(const [field,param,available] of [['matrices','matrix',data.matrices],['quotas','quota',data.quotas],['categories','category',data.categories]])if(p.has(param)&&!p.getAll(param).includes('all'))f[field]=available.filter(name=>p.getAll(param).includes(name));
     if(p.get('additions')==='0')f.includeAdditions=false;
     if(['all','increased','decreased','new','existing','newcourses','missing'].includes(p.get('change')))f.change=p.get('change');
     if(['name','base','added','seats2025','seats2026','delta','percent'].includes(p.get('sort')))f.sort=p.get('sort');
@@ -35,7 +35,7 @@
     if(filters.view==='college')p.set('college',filters.college);
     if(filters.view==='compare'){p.set('colleges',filters.colleges.join(','));p.set('branch',filters.branch);}
     if(filters.view==='state'){p.set('state',filters.state);p.set('branches',filters.branches.join(','));}
-    for(const [field,param,available] of [['matrices','matrix',data.matrices],['quotas','quota',data.quotas]]){
+    for(const [field,param,available] of [['matrices','matrix',data.matrices],['quotas','quota',data.quotas],['categories','category',data.categories]]){
       if(filters[field].length===available.length)p.set(param,'all');else if(!filters[field].length)p.set(param,'none');else for(const name of filters[field])p.append(param,name);
     }
     if(filters.search)p.set('search',filters.search);
@@ -81,13 +81,14 @@
   const collegePicker=new Picker('college-picker','college-search','Find a college…',data.colleges,()=>[filters.college],ids=>change('college',ids[0]),false);
   const comparePicker=new Picker('compare-picker','compare-search','Add a college…',data.colleges,()=>filters.colleges,ids=>change('colleges',ids),true);
   const branchPicker=new Picker('branch-picker','branch-search','Find a branch…',data.branches,()=>filters.branches,ids=>change('branches',ids),true);
-  for(const [id,list] of [['matrix-options',data.matrices],['quota-options',data.quotas]]){
+  for(const [id,list] of [['matrix-options',data.matrices],['quota-options',data.quotas],['category-options',data.categories]]){
     $(id).innerHTML=list.map(name=>`<label class="picker-option"><input type="checkbox" value="${escape(name)}"><span>${escape(name)}</span></label>`).join('');
-    $(id).addEventListener('change',()=>change(id==='matrix-options'?'matrices':'quotas',[...$(id).querySelectorAll('input:checked')].map(i=>i.value)));
+    $(id).addEventListener('change',()=>change({'matrix-options':'matrices','quota-options':'quotas','category-options':'categories'}[id],[...$(id).querySelectorAll('input:checked')].map(i=>i.value)));
   }
   function syncChecks(){
-    for(const [id,values] of [['matrix-options',filters.matrices],['quota-options',filters.quotas]])for(const input of $(id).querySelectorAll('input')){input.checked=values.includes(input.value);input.closest('label').classList.toggle('selected',input.checked);}
+    for(const [id,values] of [['matrix-options',filters.matrices],['quota-options',filters.quotas],['category-options',filters.categories]])for(const input of $(id).querySelectorAll('input')){input.checked=values.includes(input.value);input.closest('label').classList.toggle('selected',input.checked);}
     $('quota-selection').textContent=filters.quotas.length===data.quotas.length?'All quotas':filters.quotas.length===0?'Choose quotas':filters.quotas.length===1?filters.quotas[0]:`${filters.quotas.length} quotas selected`;
+    $('category-selection').textContent=filters.categories.length===data.categories.length?'All categories':filters.categories.length===0?'Choose categories':filters.categories.length===1?filters.categories[0]:`${filters.categories.length} categories selected`;
   }
   function syncControls(){
     options('state',states,filters.state,'All states / union territories');options('compare-branch',data.branches,filters.branch);
@@ -98,26 +99,29 @@
   }
   function change(name,value){
     filters[name]=value;if(name==='view'){filters.search='';filters.sort='name';filters.direction='asc';syncControls();}
-    if(['quotas','matrices'].includes(name))syncChecks();render();
+    if(['quotas','matrices','categories'].includes(name))syncChecks();render();
   }
   function renderSummary(){
-    const s=core.summarize(rows),pct=s.seats2025?s.delta/s.seats2025*100:null;
+    const s=core.summarize(rows),pct=s.delta!==null&&s.seats2025?s.delta/s.seats2025*100:null;
     $('stats').innerHTML=`<div class="stat"><span>2025 comparison seats</span><strong>${format(s.seats2025)}</strong><small>${filters.includeAdditions?`${format(s.base2025)} original + ${format(s.added2025)} added`:'Original matrix only'}</small></div><div class="stat"><span>2026 matrix seats</span><strong>${format(s.seats2026)}</strong><small>Supplied 2026 snapshots</small></div><div class="stat ${s.delta>=0?'positive':'negative'}"><span>Net seat change</span><strong>${signed(s.delta)}</strong><small>${pct===null?'No 2025 seats to compare':percent(pct)+' versus 2025'}</small></div><div class="stat"><span>Colleges with seats</span><strong class="stat-neutral">${format(s.colleges2025)} → ${format(s.colleges2026)}</strong><small>${format(s.newColleges)} newly listed in this view</small></div>`;
     const blocks=[['Newly listed colleges',s.newCollegeSeats,`${format(s.newColleges)} colleges absent from the baseline`,false],['Increases at existing colleges',s.existingIncreases,`${format(s.growingColleges)} colleges with positive row changes`,false],['Reductions at existing colleges',-s.existingReductions,'Includes courses or quota listings no longer present',true],['Colleges absent from 2026',-s.missingCollegeSeats,`${format(s.missingColleges)} colleges; not proof of closure`,true]];
     $('growth-breakdown').innerHTML=blocks.map(([label,value,detail,loss])=>`<div class="growth-item ${loss?'loss':''}"><span>${label}</span><strong>${signed(value)}</strong><small>${detail}</small></div>`).join('');
     const gains=s.newCollegeSeats+s.existingIncreases;
     $('growth-bar').innerHTML=`<span style="width:${gains?s.newCollegeSeats/gains*100:0}%"></span><span style="width:${gains?s.existingIncreases/gains*100:0}%"></span>`;
-    $('growth-context').textContent=rows.length?`${format(gains)} positive seat changes: ${format(s.newCollegeSeats)} at newly listed colleges and ${format(s.existingIncreases)} at existing colleges. Existing colleges retained in 2026 have a net change of ${signed(s.existingNet)}; their increases include ${format(s.newCourseSeats)} seats in new course listings. After all reductions, the overall change is ${signed(s.delta)}.`:'Choose a college, state or course to see the contribution to seat changes.';
+    $('growth-context').textContent=rows.length?`${s.nonComparableRows?`Comparable category rows only; ${format(s.nonComparableRows)} rows retain source totals and are excluded from growth. `:''}${format(gains)} positive seat changes: ${format(s.newCollegeSeats)} at newly listed colleges and ${format(s.existingIncreases)} at existing colleges. Existing colleges retained in 2026 have a net change of ${signed(s.existingNet)}; their increases include ${format(s.newCourseSeats)} seats in new course listings. After all reductions, the ${s.nonComparableRows?'comparable':'overall'} change is ${signed(s.comparableDelta)}.`:'Choose a college, state or course to see the contribution to seat changes.';
+    $('category-note').hidden=!s.nonComparableRows;
+    $('category-note').textContent=s.nonComparableRows?`${format(s.nonComparableRows)} listings include supplied totals without a category breakdown. These totals remain visible and are labelled “Total only”; other cells show your selected categories. Overall change is unavailable because these are different counting bases. The growth breakdown uses comparable rows only.`:'';
+    if(s.nonComparableRows){const stats=$('stats').querySelectorAll('.stat');stats[0].querySelector('small').textContent+=' · includes source totals';stats[2].classList.remove('positive','negative');stats[2].querySelector('small').textContent='Category change unavailable where a source provides totals only';}
   }
   function render(){
     rows=core.sorted(core.query(data,filters),filters.sort,filters.direction,filters.view);renderSummary();
     const c=colleges.get(filters.college);
     const heading={college:['COLLEGE OVERVIEW',c?.name||'Choose a college',`${c?.state||''} · Institute code(s): ${c?.codes.join(' / ')||''}`],compare:['COLLEGE COMPARISON',branches.get(filters.branch)?.name||'Choose a course',`${filters.colleges.length} selected colleges · 2025 and 2026 side by side`],state:['EXPLORE A STATE',filters.state==='all'?'All states & union territories':filters.state,filters.branches.length?filters.branches.map(id=>branches.get(id)?.name).join(' · '):'All courses · 2025 and 2026 side by side']}[filters.view];
     $('results-eyebrow').textContent=heading[0];$('results-title').textContent=heading[1];$('results-description').textContent=heading[2];
-    const pills=[filters.includeAdditions?'2025 includes additions':'2025 original matrix',...(filters.matrices.length===data.matrices.length?['All matrices']:filters.matrices),...(filters.quotas.length===data.quotas.length?['All quotas']:filters.quotas)];
+    const pills=[filters.includeAdditions?'2025 includes additions':'2025 original matrix',...(filters.matrices.length===data.matrices.length?['All matrices']:filters.matrices),...(filters.quotas.length===data.quotas.length?['All quotas']:filters.quotas),...(filters.categories.length===data.categories.length?['All categories']:filters.categories.map(c=>'Category: '+c))];
     $('active-filters').innerHTML=pills.map(p=>`<span class="filter-pill">${escape(p)}</span>`).join('');
     $('export').disabled=!rows.length;$('empty').hidden=Boolean(rows.length);$('table-container').hidden=!rows.length;$('clear-result-search').hidden=!filters.search;
-    $('empty-message').textContent=!filters.matrices.length?'Select at least one seat matrix.':!filters.quotas.length?'Select at least one allotment quota.':filters.view==='compare'&&!filters.colleges.length?'Choose colleges to compare.':'Try another course, quota or change filter. Search includes both years and all matching rows.';
+    $('empty-message').textContent=!filters.matrices.length?'Select at least one seat matrix.':!filters.quotas.length?'Select at least one allotment quota.':!filters.categories.length?'Select at least one seat category.':filters.view==='compare'&&!filters.colleges.length?'Choose colleges to compare.':'Try another course, quota, category or change filter. Search includes both years and all matching rows.';
     cancelAnimationFrame(scrollFrame);scrollFrame=0;rendered=0;
     const sort=(field,label)=>`<button data-sort="${field}" aria-label="Sort by ${label}">${label}<span class="sort-arrow" aria-hidden="true">${filters.sort===field?(filters.direction==='asc'?'↑':'↓'):'↕'}</span></button>`;
     const aria=field=>filters.sort===field?(filters.direction==='asc'?'ascending':'descending'):'none';
@@ -127,8 +131,9 @@
   function markup(row,index){
     const label=filters.view==='college'?row.branch.name:row.college.name;
     const secondary=filters.view==='college'?'':`${row.college.state} · ${row.branch.name}`;
-    const num=(n,cls='')=>`<td class="rank-cell ${cls}"><span class="rank-value ${n===0?'muted-number':''}">${format(n)}</span></td>`;
-    return `<tr aria-rowindex="${index+2}"><td title="${escape(row.college.address)}"><span class="primary-label">${escape(label)}</span>${secondary?`<span class="secondary-label">${escape(secondary)}</span>`:''}<span class="code-label">${escape(row.college.codes.join(' / '))}</span></td><td class="group-cell">${escape(row.matrix)}<span class="secondary-label">${escape(row.quota)}</span></td>${num(row.base)}<td class="rank-cell" title="${filters.includeAdditions?'Included in the 2025 total':'Excluded from the 2025 total'}"><span class="rank-value ${row.added===0?'muted-number':''}">${format(row.added)}</span>${!filters.includeAdditions&&row.added?'<span class="rank-caption">excluded</span>':''}</td>${num(row.seats2025,'baseline-cell')}${num(row.seats2026,'year-new')}<td class="rank-cell"><span class="rank-value ${row.delta>0?'delta-positive':row.delta<0?'delta-negative':'muted-number'}">${signed(row.delta)}</span></td><td class="rank-cell"><span class="rank-value">${percent(row.percent)}</span>${row.percent===null?'<span class="rank-caption">no 2025 seats</span>':''}</td><td class="status-cell"><span class="status-badge ${row.isNewCollege?'new':row.delta<0?'loss':''}">${escape(row.status)}</span></td></tr>`;
+    const totalLabel=component=>row.fallbackComponents.includes(component)?'<span class="rank-caption total-only">Total only</span>':'';
+    const num=(n,cls='',component)=>`<td class="rank-cell ${cls}"><span class="rank-value ${n===0?'muted-number':''}">${format(n)}</span>${totalLabel(component)}</td>`;
+    return `<tr aria-rowindex="${index+2}"><td title="${escape(row.college.address)}"><span class="primary-label">${escape(label)}</span>${secondary?`<span class="secondary-label">${escape(secondary)}</span>`:''}<span class="code-label">${escape(row.college.codes.join(' / '))}</span></td><td class="group-cell">${escape(row.matrix)}<span class="secondary-label">${escape(row.quota)}</span></td>${num(row.base,'',0)}<td class="rank-cell" title="${filters.includeAdditions?'Included in the 2025 total':'Excluded from the 2025 total'}"><span class="rank-value ${row.added===0?'muted-number':''}">${format(row.added)}</span>${totalLabel(1)}${!filters.includeAdditions&&row.added?'<span class="rank-caption">excluded</span>':''}</td>${num(row.seats2025,'baseline-cell',row.fallbackComponents.find(i=>i===0||i===1&&filters.includeAdditions))}${num(row.seats2026,'year-new',2)}<td class="rank-cell"><span class="rank-value ${row.delta>0?'delta-positive':row.delta<0?'delta-negative':'muted-number'}">${signed(row.delta)}</span>${!row.comparable?'<span class="rank-caption">not comparable</span>':''}</td><td class="rank-cell"><span class="rank-value">${percent(row.percent)}</span>${row.percent===null?`<span class="rank-caption">${row.comparable?'no 2025 seats':'not comparable'}</span>`:''}</td><td class="status-cell"><span class="status-badge ${row.isNewCollege?'new':row.delta<0?'loss':''}">${escape(row.status)}</span></td></tr>`;
   }
   function appendRows(){
     const end=Math.min(rendered+batch,rows.length);$('seat-rows').insertAdjacentHTML('beforeend',rows.slice(rendered,end).map((r,i)=>markup(r,rendered+i)).join(''));rendered=end;
@@ -140,9 +145,11 @@
   $('include-additions').addEventListener('change',e=>change('includeAdditions',e.target.checked));
   $('result-search').addEventListener('input',e=>change('search',e.target.value));
   $('clear-result-search').addEventListener('click',()=>{$('result-search').value='';change('search','');});
-  $('quota-all').addEventListener('click',()=>change('quotas',data.quotas.slice()));$('quota-clear').addEventListener('click',()=>change('quotas',[]));
-  $('quota-picker').addEventListener('keydown',e=>{if(e.key==='Escape'){$('quota-picker').open=false;$('quota-summary').focus();}});
-  document.addEventListener('click',e=>{if(!$('quota-picker').contains(e.target))$('quota-picker').open=false;});
+  for(const [prefix,field] of [['quota','quotas'],['category','categories']]){
+    $(prefix+'-all').addEventListener('click',()=>change(field,data[field].slice()));$(prefix+'-clear').addEventListener('click',()=>change(field,[]));
+    $(prefix+'-picker').addEventListener('keydown',e=>{if(e.key==='Escape'){$(prefix+'-picker').open=false;$(prefix+'-summary').focus();}});
+    document.addEventListener('click',e=>{if(!$(prefix+'-picker').contains(e.target))$(prefix+'-picker').open=false;});
+  }
   $('reset').addEventListener('click',()=>{const view=filters.view;filters={...defaults(),view};for(const picker of [collegePicker,comparePicker,branchPicker])picker.input.value='';syncControls();render();});
   $('table-container').addEventListener('scroll',()=>{if(scrollFrame)return;scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;const c=$('table-container');$('back-to-top').hidden=c.scrollTop<200;if(rendered<rows.length&&c.scrollHeight-c.scrollTop-c.clientHeight<400)appendRows();});},{passive:true});
   $('back-to-top').addEventListener('click',()=>{$('table-container').scrollTop=0;$('table-container').focus({preventScroll:true});});

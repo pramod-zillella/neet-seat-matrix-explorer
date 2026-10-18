@@ -1818,5 +1818,18 @@
     "2026 totals describe the supplied matrices; no 2026 additions file was supplied.",
     "New means absent from the selected 2025 baseline across all courses and matrices, not newly opened.",
     "Missing 2026 records are not evidence of college closure or formal seat withdrawal."
-  ]
+  ],
+  "categoryLabels": [
+    "Open / UR",
+    "Open / UR PwD",
+    "EWS",
+    "EWS PwD",
+    "OBC",
+    "OBC PwD",
+    "SC",
+    "SC PwD",
+    "ST",
+    "ST PwD"
+  ],
+  "categoryPolicy": "Filter detailed components by selected categories. Where a source has totals only, retain its supplied total once and label it; do not infer a category breakdown or calculate category growth against that total."
 }

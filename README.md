@@ -6,7 +6,7 @@ Compare the supplied **2025 and 2026** seat matrices for **Central / All India, 
 
 Double-click **`Open Dashboard.cmd`**, or open **`index.html`** in Edge, Chrome or Firefox. The site works directly from disk and needs no server or Python installation for viewing.
 
-The initial view shows all states, courses, matrices and quotas. It compares the original 2025 seats **plus 2025 additions** against the supplied 2026 matrices.
+The initial view shows all states, courses, matrices, quotas and seat categories. It compares the original 2025 seats **plus 2025 additions** against the supplied 2026 matrices.
 
 ## Views and controls
 
@@ -15,6 +15,7 @@ The initial view shows all states, courses, matrices and quotas. It compares the
 - **Explore a state:** select one state or all states, and optionally one or more courses.
 - **Seat matrix:** select any combination of Central / All India, Deemed and DNB.
 - **Allotment quota:** multi-select specific quotas, with Select all and Clear selection controls.
+- **Seat category:** multi-select Open / UR, EWS, OBC, SC and ST, with each PwD variant available separately. Select all restores the full seat totals; Clear selection shows no results until a category is chosen. The filter applies in all three views, CSV exports and copied view links.
 - **Show changes:** find increases, decreases, newly listed colleges, existing colleges, new courses at existing colleges, or colleges absent from the 2026 files.
 - **Include 2025 additions:** checked by default. Uncheck it to compare the original 2025 matrix alone. The additions column remains visible and is marked excluded where applicable.
 - **Continuous scrolling:** rows appear automatically as you scroll. Table headings stay visible, and Back to top returns to the beginning.
@@ -22,6 +23,14 @@ The initial view shows all states, courses, matrices and quotas. It compares the
 - **Copy view link:** after hosting, shares the selected filters and baseline choice. It does not save scroll position.
 
 The table shows **2025 original → 2025 added → 2025 total → 2026 seats → seat change → percentage change → context**. A percentage is left blank when the 2025 comparison value is zero.
+
+### Totals where category breakdowns are unavailable
+
+The **2025 Deemed original matrix contains totals only**. Those supplied totals stay visible when you select categories, labelled **Total only**. They appear once per listing, regardless of how many categories you choose. Detailed sources, including 2025 additions and 2026 Deemed seats, show the sum of the selected categories.
+
+A full source total cannot establish a selected-category increase/decrease. The row's change/percentage and overall net-change card show a dash when the comparison mixes those counting bases. A notice explains which listings retain totals; the growth breakdown uses comparable rows only. Increase/decrease filters require a comparable change. CSV exports retain the numbers and identify the selected categories, the basis of each source component and whether the comparison is valid.
+
+Selecting all categories keeps the original comparison unchanged, including every verified total below. Open / UR is the unreserved seat category, not an assertion that only candidates with a General-category identity may compete. Under a category filter, changes may reflect category redistribution rather than changes in overall intake. A zero in the filtered 2026 column does not mean the whole course listing disappeared when other categories still have seats.
 
 ## Verified totals
 
@@ -70,7 +79,7 @@ The matrices contain different formats:
 | `2026_Seat_Matrix_Deemed.csv` | One category per row, with StateName and Branch | `TotalSeats` |
 | `2026_Seat_Matrix_DNB.csv` | Seat categories in columns; includes Institute Type | **`Total Seats`** |
 
-Four files contain grand-total rows. Those rows are checked but **never added as seats again**. The 2025 additions file is treated as incremental seats and remains a separate component throughout the calculation. The 2025 Deemed file has no reserved-category breakdown, so the dashboard does not infer one.
+Four files contain grand-total rows. Those rows are checked but **never added as seats again**. The 2025 additions file is treated as incremental seats and remains a separate component throughout the calculation. Category columns and coded category rows (`OP`, `EW`, `BC`, `SC`, `ST`; `NO`/`PH`) map to ten consistent category labels. Their per-listing counts remain separate for 2025 original, 2025 added and 2026. Every available category vector reconciles to its source total. The 2025 Deemed file has no reserved-category breakdown, so the dashboard retains its supplied total and does not infer one.
 
 Matrix grouping follows the source file. Some records in the All India files have a DNB Institute Type label while listing MD/MS courses and All India quota; these remain in the Central / All India source group. The additions file is assigned to its matching matrix using its InstituteType/quota. Management/Paid Seats Quota and Self-Financed Merit Seat are normalized to one quota label.
 
@@ -111,4 +120,6 @@ node --test --test-isolation=none tests/core.test.cjs
 node scripts/browser_check.cjs
 ```
 
-Data checks cover headers and totals, code/course mappings, degree separation, both baseline modes, growth reconciliation for every state and matrix, filter scope, and the distinction between new courses and new colleges. Browser checks use installed Microsoft Edge in a hidden local session and cover the three views, matrix and quota selections, baseline switches, shared filters, CSV export, continuous scrolling, mobile layout and direct-file launch.
+Data checks cover headers and totals, code/course mappings, degree separation, both baseline modes, growth reconciliation for every state and matrix, category sums against source audit totals, totals-only fallback without double counting, filter scope, and the distinction between new courses and new colleges. Browser checks use installed Microsoft Edge in a hidden local session and cover the three views, matrix/quota/category selections, baseline switches, shared filters, CSV export, continuous scrolling, keyboard controls, mobile layout and direct-file launch.
+
+Regenerate the hosting ZIP after changes with `python scripts/package_site.py`. Its explicit file list includes the public app, data, README and dashboard launcher; it excludes local browser profiles, source CSVs and tests.
